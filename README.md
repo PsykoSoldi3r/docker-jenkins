@@ -59,7 +59,7 @@ Don't forget to change the password of the admin account. Or create a new one an
 
 ### Deploy
 1. Create a new droplet with the pre installed docker image (can be found under `One-click apps`)
-2. Use the following script for the user data (it takes some time before jenkins is up after droplet is created)
+2. Use the following script for the user data 
 ```bash
 #!/bin/bash
 
@@ -70,4 +70,4 @@ cd docker-jenkins
 docker-compose build
 docker run -p 8080:8080 -d --name jenkins psykosoldi3r/jenkins
 ```
-3. Build your droplet. Afther the droplet creation is completed Jenkins application should run on `DROPLET_IP:8080`
+3. Build your droplet. After your droplet is created, Jenkins should run on `DROPLET_IP:8080` (its takes some time before jenkins is up after droplet is created)
