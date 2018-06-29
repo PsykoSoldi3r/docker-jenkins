@@ -11,8 +11,11 @@ ssh-slaves:latest
 timestamper:latest
 ws-cleanup:latest
 ```
+Would you like to have more preinstalled plugins on your docker image? Fork this repository and edit the [`plugins.txt`](https://github.com/PsykoSoldi3r/docker-jenkins/blob/master/plugins.txt)
 
 ## Usage
+
+Make sure you have installed docker on your system. [More information](https://docs.docker.com/get-started/)
 
 ### Build Image
 ```
@@ -39,3 +42,23 @@ Make sure your docker jenkins image is running. At first time of navigating to `
 ```
 docker exec %DOCKER_NAME% cat /var/jenkins_home/secrets/initialAdminPassword
 ```
+
+## Default User
+
+### Coming Soon...
+
+```
+username: admin
+password: admin
+```
+Don't forget to change the password of the admin account. Or create a new one and remove the default user
+
+## Digital Ocean
+
+### Deploy
+1. Create a new droplet with the pre installed docker image (can be found under `One-click apps`)
+2. Use the following script for the user data
+```
+Coming Soon...
+```
+3. Build your droplet. Afther the droplet creation is completed Jenkins application should run on `DROPLET_IP:8080`
