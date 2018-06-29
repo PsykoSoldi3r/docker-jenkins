@@ -1,5 +1,7 @@
 # Jenkins Docker Image
 
+This repository is not ready for use!
+
 ## Plugins
 ```
 blueocean:latest
@@ -58,7 +60,14 @@ Don't forget to change the password of the admin account. Or create a new one an
 ### Deploy
 1. Create a new droplet with the pre installed docker image (can be found under `One-click apps`)
 2. Use the following script for the user data
-```
-Coming Soon...
+```bash
+#!/bin/bash
+
+apt-get -y update
+apt-get -y install git
+git clone https://github.com/PsykoSoldi3r/docker-jenkins.git
+cd docker-jenkins
+docker-compose build
+docker run -p 8080:8080 -d --name jenkins psykosoldi3r/jenkins
 ```
 3. Build your droplet. Afther the droplet creation is completed Jenkins application should run on `DROPLET_IP:8080`
