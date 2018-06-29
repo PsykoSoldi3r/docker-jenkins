@@ -59,7 +59,7 @@ Don't forget to change the password of the admin account. Or create a new one an
 
 ### Deploy
 1. Create a new droplet with the pre installed docker image (can be found under `One-click apps`)
-2. Use the following script for the user data
+2. Use the following script for the user data (it takes some time before jenkins is up after droplet is created)
 ```bash
 #!/bin/bash
 
