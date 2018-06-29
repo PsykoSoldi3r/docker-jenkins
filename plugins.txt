@@ -1,0 +1,8 @@
+blueocean:latest
+build-timeout:latest
+email-ext:latest
+workflow-aggregator:latest
+pipeline-github-lib:latest
+ssh-slaves:latest
+timestamper:latest
+ws-cleanup:latest
