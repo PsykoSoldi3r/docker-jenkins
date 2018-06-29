@@ -21,7 +21,7 @@ docker-composer build
 
 ### Run Image
 ```
-docker run -d -p 8080:8080 psykosoldi3r/jenkins
+docker run -d -p 8080:8080 --name jenkins psykosoldi3r/jenkins
 ```
 
 ### Initial Admin Password
