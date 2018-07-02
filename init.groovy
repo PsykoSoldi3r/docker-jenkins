@@ -10,6 +10,7 @@ security.createAccount( env.JENKINS_USER, env.JENKINS_PASS )
 security.save()
 
 def strategy = new FullControlOnceLoggedInAuthorizationStrategy()
+strategy.add( Jenkins.ADMINISTER, env.JENKINS_USER )
 
 jenkins.setSecurityRealm( security )
 jenkins.setAuthorizationStrategy( strategy )

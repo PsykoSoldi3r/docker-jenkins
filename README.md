@@ -1,7 +1,5 @@
 # Jenkins Docker Image
 
-This repository is not ready for use!
-
 ## Plugins
 ```
 blueocean:latest
@@ -41,12 +39,13 @@ docker stop jenkins
 
 ## Default User
 
-If you want to change the default username and password. Its located in the Dockerfile and defined as environment variables. For now you need to turn on security manually at the Jenkins Configure Global Security settings
+If you want to change the default username and password. Its located in the Dockerfile and defined as environment variables.
 ```
 username: admin
 password: admin
 ```
-Tip: don't forget to change the password of the admin account. Or create a new one and remove the default user
+Tip A: You need manually set the security of jenkins
+Tip B: don't forget to change the password of the admin account. Or create a new one and remove the default user
 
 ## Digital Ocean
 
