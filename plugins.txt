@@ -6,3 +6,6 @@ pipeline-github-lib:latest
 ssh-slaves:latest
 timestamper:latest
 ws-cleanup:latest
+docker-workflow:latest
+credentials-binding:latest
+matrix-auth:latest

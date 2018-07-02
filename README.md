@@ -39,21 +39,15 @@ docker run jenkins
 docker stop jenkins
 ```
 
-### Initial Admin Password
-Make sure your docker jenkins image is running. At first time of navigating to `http://localhost:8080` Jenkins is asking for an initial password. You can get the initial password by executing this command
-```
-docker exec %DOCKER_NAME% cat /var/jenkins_home/secrets/initialAdminPassword
-```
-
 ## Default User
 
-### Coming Soon...
+If you want to change the default username and password. Its located in the Dockerfile and defined as environment variables
 
 ```
 username: admin
 password: admin
 ```
-Don't forget to change the password of the admin account. Or create a new one and remove the default user
+Tip: don't forget to change the password of the admin account. Or create a new one and remove the default user
 
 ## Digital Ocean
 
@@ -68,6 +62,6 @@ apt-get -y install git
 git clone https://github.com/PsykoSoldi3r/docker-jenkins.git
 cd docker-jenkins
 docker-compose build
-docker run -p 8080:8080 -d --name jenkins psykosoldi3r/jenkins
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins psykosoldi3r/jenkins
 ```
 3. Build your droplet. After your droplet is created, Jenkins should run on `DROPLET_IP:8080` (its takes some time before jenkins is up after droplet is created)
