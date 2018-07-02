@@ -21,7 +21,7 @@ Make sure you have installed docker on your system. [More information](https://d
 
 ### Build Image
 ```
-docker-composer build
+docker build -t psykosoldi3r/jenkins .
 ```
 
 ### Run Image
@@ -60,7 +60,7 @@ apt-get -y update
 apt-get -y install git
 git clone https://github.com/PsykoSoldi3r/docker-jenkins.git
 cd docker-jenkins
-docker-compose build
+docker build -t psykosoldi3r/jenkins .
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins psykosoldi3r/jenkins
 ```
 3. Build your droplet. After your droplet is created, Jenkins should run on `DROPLET_IP:8080` (its takes some time before jenkins is up after droplet is created)
