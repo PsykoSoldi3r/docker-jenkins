@@ -41,8 +41,7 @@ docker stop jenkins
 
 ## Default User
 
-If you want to change the default username and password. Its located in the Dockerfile and defined as environment variables
-
+If you want to change the default username and password. Its located in the Dockerfile and defined as environment variables. For now you need to turn on security manually at the Jenkins Configure Global Security settings
 ```
 username: admin
 password: admin
